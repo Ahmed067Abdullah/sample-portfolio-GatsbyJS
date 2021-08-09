@@ -15,18 +15,18 @@ const Projects = ({ data }) => {
         <h3>Projects & Websites I've Created</h3>
         <div className={styles.projects}>
           {projects.map(project => {
-            // const src = getImage(project.frontmatter.thumb.childImageSharp.fluid)
-            const image = getImage(project.frontmatter.thumb)
+            const { thumb, slug, title, stack } = project.frontmatter;
+            const image = getImage(thumb)
             return (
-              <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
+              <Link to={"/projects/" + slug} key={project.id}>
                 <div>
                   <GatsbyImage
                     image={image}
                     alt="A dinosaur"
                     placeholder="blurred"
                   />
-                  <h3>{project.frontmatter.title}</h3>
-                  <p>{project.frontmatter.stack}</p>
+                  <h3>{title}</h3>
+                  <p>{stack}</p>
                 </div>
               </Link>
             )

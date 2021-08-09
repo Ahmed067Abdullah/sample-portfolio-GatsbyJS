@@ -30,7 +30,6 @@ export const qurey = graphql`
 query MyQuery($slug: String) {
   project: markdownRemark(frontmatter: {slug: {eq: $slug}}) {
     frontmatter {
-      date
       stack
       title
       featuredImg {

@@ -25,9 +25,10 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`
   ],
   siteMetadata: {
-    title: "My Title",
+    title: "Web Warrior",
     description: "Some description",
     email: "ahmed067abdullah@gmail.com"
   }
